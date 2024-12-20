@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #a4d1c7;
+  background-color: #85abec;
   padding: 0 20px;
   height: 60px;
   position: relative;
@@ -142,14 +142,14 @@ footer .heart {
 }
 
 /* Responsive Design */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 1fr); /* Switch to 2x2 grid earlier */
     gap: 20px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 350px) {
   .grid {
     grid-template-columns: 1fr; /* Switch to 1x1 grid */
     gap: 20px;
