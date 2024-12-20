@@ -79,19 +79,17 @@ header h1 {
   padding: 40px 20px;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px; /* Minimum gap between grid items */
-  max-width: 100%;
-  margin: 0 auto; /* Center the grid horizontally */
-  justify-items: center; /* Centers grid items */
-  padding: 0 70px; /* Ensure at least 70px padding on both sides */
-  box-sizing: border-box;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  gap: 40px;
+  max-width: calc(100% - 140px); /* Ensures 70px on left and right */
+  width: 100%;
+  margin: 0 auto; /* Centers the grid */
+  justify-items: center; /* Ensures items inside grid are centered */
 }
 
 /* Individual Tiles */
@@ -143,19 +141,14 @@ footer .heart {
 }
 
 /* Responsive Design */
-
-/* When screen width is 940px or less, switch to 2x2 grid */
 @media (max-width: 940px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* Switch to 2x2 grid */
-    padding: 0 70px; /* Keep the 70px padding on both sides */
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2x2 grid earlier */
   }
 }
 
-/* When screen width is 600px or less, switch to 1x1 grid */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr; /* Switch to 1x1 grid */
-    padding: 0 70px; /* Keep the 70px padding on both sides */
   }
 }
