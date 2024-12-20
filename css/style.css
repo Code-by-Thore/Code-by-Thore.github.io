@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #85abec;
+  background-color: #7dbd9f;
   padding: 0 20px;
   height: 60px;
   position: relative;
@@ -86,10 +86,11 @@ header h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  max-width: calc(100% - 140px); /* Ensures 70px on left and right */
+  max-width: calc(100% - 160px); /* Adjusted for max 80px on left and right */
   width: 100%;
   margin: 0 auto; /* Centers the grid */
   justify-items: center; /* Ensures items inside grid are centered */
+  padding: 0 80px; /* Ensure there's a maximum 80px padding on both sides */
 }
 
 /* Individual Tiles */
