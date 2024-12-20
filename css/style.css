@@ -142,14 +142,14 @@ footer .heart {
 }
 
 /* Responsive Design */
-@media (max-width: 700) {
+@media (max-width: 800px) {
   .grid {
     grid-template-columns: repeat(2, 1fr); /* Switch to 2x2 grid earlier */
     gap: 20px;
   }
 }
 
-@media (max-width: 400) {
+@media (max-width: 400px) {
   .grid {
     grid-template-columns: 1fr; /* Switch to 1x1 grid */
     gap: 20px;
