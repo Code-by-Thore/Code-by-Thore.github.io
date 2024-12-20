@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #7db7ad;
+  background-color: #5078be;
   padding: 0 20px;
   height: 60px;
   position: relative;
@@ -88,7 +88,7 @@ header h1 {
   gap: 40px; /* Increased the gap between grid items */
   max-width: 100%;
   width: 100%;
-  margin: 0 80px; /* Ensures there is margin on left and right side */
+  margin: 0 100px; /* Ensures there is a minimum 100px margin on left and right side */
   justify-items: center; /* Centers grid items */
 }
 
@@ -141,18 +141,18 @@ footer .heart {
 }
 
 /* Responsive Design */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr); /* Switch to 2x2 grid earlier */
     gap: 40px; /* Keep the gap between grid items */
-    margin: 0 40px; /* Smaller margin on left and right side */
+    margin: 0 100px; /* Ensure a minimum margin of 100px on the sides */
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr; /* Switch to 1x1 grid */
     gap: 40px; /* Keep the gap between grid items */
-    margin: 0 20px; /* Smaller margin on left and right side */
+    margin: 0 80px; /* Ensure a margin of 80px on the sides */
   }
 }
