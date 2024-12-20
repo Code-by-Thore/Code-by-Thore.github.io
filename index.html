@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My GitHub Pages Site</title>
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Include FontAwesome for the symbols -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -16,6 +17,14 @@
       <div class="header-container">
         <h1>Welcome to My Website</h1>
       </div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <!-- Navigation Icons -->
       <nav>
         <a href="#"><i class="fas fa-coffee"></i></a>
@@ -23,16 +32,9 @@
         <a href="#"><i class="fas fa-shopping-cart"></i></a>
         <!-- Shopping cart symbol -->
       </nav>
-      <!-- Hamburger Menu Icon -->
-      <div class="hamburger-menu" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+
       <!-- Mobile Menu -->
       <div class="mobile-menu" id="mobileMenu">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
       </div>
@@ -97,7 +99,9 @@
       // Toggle the mobile menu visibility
       function toggleMenu() {
         const menu = document.getElementById("mobileMenu");
+        const hamburger = document.querySelector(".hamburger-menu");
         menu.classList.toggle("open");
+        hamburger.classList.toggle("open");
       }
     </script>
   </body>
