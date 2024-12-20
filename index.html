@@ -5,13 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My GitHub Pages Site</title>
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Corrected link to style.css -->
   </head>
   <body>
     <!-- Header Section -->
     <header>
       <div class="header-container">
         <h1>Welcome to My Website</h1>
+      </div>
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
       </div>
     </header>
 
@@ -24,19 +36,58 @@
     <!-- Grid of Rounded Tiles Section -->
     <section class="projects">
       <div class="grid">
-        <div class="tile"><a href="project1.html">Project 1</a></div>
-        <div class="tile"><a href="project2.html">Project 2</a></div>
-        <div class="tile"><a href="project3.html">Project 3</a></div>
-        <div class="tile"><a href="project4.html">Project 4</a></div>
-        <!-- Add more tiles as needed -->
+        <div class="tile">
+          <img src="your-image-path-1.jpg" alt="Project 1" />
+          <p>Project 1</p>
+        </div>
+        <div class="tile">
+          <img src="your-image-path-2.jpg" alt="Project 2" />
+          <p>Project 2</p>
+        </div>
+        <div class="tile">
+          <img src="your-image-path-3.jpg" alt="Project 3" />
+          <p>Project 3</p>
+        </div>
+        <div class="tile">
+          <img src="your-image-path-4.jpg" alt="Project 4" />
+          <p>Project 4</p>
+        </div>
+        <div class="tile">
+          <img src="your-image-path-5.jpg" alt="Project 5" />
+          <p>Project 5</p>
+        </div>
+        <div class="tile">
+          <img src="your-image-path-6.jpg" alt="Project 6" />
+          <p>Project 6</p>
+        </div>
+        <div class="tile">
+          <img src="your-image-path-7.jpg" alt="Project 7" />
+          <p>Project 7</p>
+        </div>
+        <div class="tile">
+          <img src="your-image-path-8.jpg" alt="Project 8" />
+          <p>Project 8</p>
+        </div>
+        <div class="tile">
+          <img src="your-image-path-9.jpg" alt="Project 9" />
+          <p>Project 9</p>
+        </div>
       </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
       <div class="footer-container">
-        <p>Made with <3 by Thore</p>
+        <p>Made with <span class="heart">❤️</span> by Thore</p>
       </div>
     </footer>
+
+    <script>
+      // Toggle the mobile menu visibility
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("open");
+      }
+    </script>
   </body>
 </html>
