@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #6d8e31;
+  background-color: #9385ec;
   padding: 0 20px;
   height: 60px;
   position: relative;
@@ -84,13 +84,13 @@ header h1 {
 /* Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px; /* Adjusted gap to not exceed 50px */
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Ensure columns are flexible */
+  gap: 50px; /* Gap between the grid tiles */
   width: 100%;
   margin: 0 auto; /* Centers the grid */
   justify-items: center; /* Ensures items inside grid are centered */
   padding: 0 80px; /* Ensure there's a maximum 80px padding on both sides */
-  box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
+  box-sizing: border-box; /* Ensure padding doesn't affect the overall width */
 }
 
 /* Individual Tiles */
@@ -144,7 +144,7 @@ footer .heart {
 /* Responsive Design */
 @media (max-width: 940px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* Switch to 2x2 grid earlier */
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Switch to 2x2 grid earlier */
   }
 }
 
