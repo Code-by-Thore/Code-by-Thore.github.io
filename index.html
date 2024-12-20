@@ -14,29 +14,27 @@
   <body>
     <!-- Header Section -->
     <header>
-      <div class="header-container">
+      <div class="header-content">
         <h1>Welcome to My Website</h1>
-      </div>
 
-      <!-- Navigation Icons (slightly to the left of the menu) -->
-      <nav>
-        <div class="icons">
-          <a href="#"><i class="fas fa-coffee"></i></a>
-          <!-- Coffee symbol -->
-          <a href="#"><i class="fas fa-shopping-cart"></i></a>
-          <!-- Shopping cart symbol -->
+        <!-- Navigation Icons -->
+        <nav>
+          <div class="icons">
+            <a href="#"><i class="fas fa-coffee"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </nav>
+
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </nav>
-
-      <!-- Hamburger Menu (placed after the icons) -->
-      <div class="hamburger-menu" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
       </div>
 
       <!-- Mobile Menu -->
-      <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu">
         <a href="#">About</a>
         <a href="#">Contact</a>
       </div>
@@ -96,15 +94,5 @@
         <p>Made with <span class="heart">❤️</span> by Thore</p>
       </div>
     </footer>
-
-    <script>
-      // Toggle the mobile menu visibility
-      function toggleMenu() {
-        const menu = document.getElementById("mobileMenu");
-        const hamburger = document.querySelector(".hamburger-menu");
-        menu.classList.toggle("open");
-        hamburger.classList.toggle("open");
-      }
-    </script>
   </body>
 </html>

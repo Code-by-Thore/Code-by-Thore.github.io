@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
 }
 
-/* Navigation Bar */
+/* Header Section */
 header {
   background-color: #333;
   padding: 20px 20px; /* Navbar height */
@@ -28,7 +28,7 @@ header {
 header h1 {
   color: white;
   font-size: 1.5rem;
-  text-align: center; /* Centered text in navbar */
+  text-align: center;
   flex-grow: 1;
   position: absolute;
   left: 50%;
@@ -38,22 +38,23 @@ header h1 {
 /* Navigation Icons */
 nav {
   display: flex;
-  justify-content: flex-start; /* Ensures icons are slightly to the left */
-  margin-left: -15px; /* Adjust margin to position the icons more to the left */
-}
-
-nav .icons {
-  display: flex;
-  gap: 15px; /* Adjust space between the symbols */
+  gap: 20px;
 }
 
 nav a {
   color: white;
-  font-size: 24px; /* Adjusted size of the symbols */
+  font-size: 24px;
   text-decoration: none;
 }
 
-/* Hamburger Menu (placed next to the icons now) */
+/* Icons Container */
+nav .icons {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+/* Hamburger Menu */
 .hamburger-menu {
   display: flex;
   flex-direction: column;
@@ -85,8 +86,8 @@ nav a {
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -300px; /* Hide off-screen by default */
-  width: 200px; /* Adjusted width */
+  right: -100%; /* Initially off-screen */
+  width: 200px;
   height: 100%;
   background-color: #333;
   z-index: 9;
@@ -99,7 +100,7 @@ nav a {
 }
 
 .mobile-menu.open {
-  right: 0; /* Slide in from the right */
+  right: 0; /* Slide in from the right when open */
 }
 
 .mobile-menu a {
@@ -122,22 +123,23 @@ nav a {
 
 .showcase p {
   font-size: 1.2rem;
-  margin-top: 20px; /* Added space between headings */
+  margin-top: 20px;
 }
 
 /* Grid of Rounded Tiles */
 .projects {
   display: flex;
   justify-content: center;
-  padding: 40px 20px; /* Increased margin between sides */
+  padding: 40px 20px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px; /* Adjusted gap between tiles */
+  gap: 10px;
   max-width: 1200px;
   width: 100%;
+  margin: 0 auto; /* Ensures grid is centered */
 }
 
 .tile {
@@ -151,7 +153,7 @@ nav a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px; /* Added padding */
+  padding: 20px;
   transition: transform 0.3s;
 }
 
@@ -176,11 +178,11 @@ nav a {
 footer {
   background-color: lightblue;
   text-align: center;
-  padding: 40px 20px; /* Increased footer height */
+  padding: 40px 20px;
   width: 100%;
   position: relative;
   bottom: 0;
-  height: 150px; /* Increased footer height */
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,7 +193,7 @@ footer p {
 }
 
 footer .heart {
-  color: white; /* White heart */
+  color: white;
   font-size: 1.5rem;
 }
 
@@ -199,24 +201,12 @@ footer .heart {
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-    gap: 10px; /* Reduced the gap further */
-  }
-
-  .tile {
-    height: 300px; /* Fixed tile height */
-    width: 300px; /* Fixed tile width */
   }
 }
 
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr; /* 1 column on small screens */
-    gap: 10px; /* Reduced the gap between tiles */
-  }
-
-  .tile {
-    height: 300px; /* Fixed tile height */
-    width: 300px; /* Fixed tile width */
   }
 
   .mobile-menu {
