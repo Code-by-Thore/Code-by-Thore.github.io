@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #8aa8dd;
+  background-color: #7db7ad;
   padding: 0 20px;
   height: 60px;
   position: relative;
@@ -85,7 +85,7 @@ header h1 {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px; /* Reduced gap between tiles */
+  gap: 40px; /* Increased the gap between grid items */
   max-width: 100%;
   width: 100%;
   margin: 0 80px; /* Ensures there is margin on left and right side */
@@ -144,7 +144,7 @@ footer .heart {
 @media (max-width: 800px) {
   .grid {
     grid-template-columns: repeat(2, 1fr); /* Switch to 2x2 grid earlier */
-    gap: 15px; /* Keep the gap small */
+    gap: 40px; /* Keep the gap between grid items */
     margin: 0 40px; /* Smaller margin on left and right side */
   }
 }
@@ -152,7 +152,7 @@ footer .heart {
 @media (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr; /* Switch to 1x1 grid */
-    gap: 15px; /* Keep the gap small */
+    gap: 40px; /* Keep the gap between grid items */
     margin: 0 20px; /* Smaller margin on left and right side */
   }
 }
