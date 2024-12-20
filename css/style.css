@@ -87,9 +87,8 @@ header h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px; /* Minimum gap between grid items */
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the grid horizontally */
   justify-items: center; /* Centers grid items */
-  width: 100%;
   padding: 0 70px; /* Ensure at least 70px padding on both sides */
   box-sizing: border-box;
   overflow-x: hidden; /* Prevent horizontal scrolling */
