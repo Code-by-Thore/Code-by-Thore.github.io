@@ -6,52 +6,43 @@
   font-family: Arial, sans-serif;
 }
 
-/* Body Styles */
-body {
-  background-color: #f4f4f4;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Header Section */
+/* Header Styles */
 header {
-  background-color: #333;
-  padding: 20px 20px; /* Navbar height */
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px; /* Navbar height */
+  background-color: #333;
+  padding: 0 20px;
+  height: 60px; /* Fixed height for alignment */
+  position: relative;
 }
 
+/* Title */
 header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
   font-size: 1.5rem;
   text-align: center;
-  flex-grow: 1;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); /* Ensures title is exactly centered */
+  margin: 0;
 }
 
 /* Navigation Icons */
-nav {
+.nav-right {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 15px; /* Space between icons and menu */
 }
 
-nav a {
+.icons a {
   color: white;
-  font-size: 24px;
+  font-size: 1.5rem; /* Adjusted size of icons */
   text-decoration: none;
 }
 
-/* Icons Container */
-nav .icons {
-  display: flex;
-  gap: 15px;
-  margin-right: 20px;
+.icons a:hover {
+  color: lightblue; /* Add hover effect */
 }
 
 /* Hamburger Menu */
@@ -60,7 +51,6 @@ nav .icons {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  z-index: 10;
 }
 
 .hamburger-menu span {
@@ -70,6 +60,7 @@ nav .icons {
   transition: transform 0.3s ease-in-out;
 }
 
+/* Open state for menu bars */
 .hamburger-menu.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -80,33 +71,6 @@ nav .icons {
 
 .hamburger-menu.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Mobile Menu */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%; /* Initially off-screen */
-  width: 200px;
-  height: 100%;
-  background-color: #333;
-  z-index: 9;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.mobile-menu.open {
-  right: 0; /* Slide in from the right when open */
-}
-
-.mobile-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
 }
 
 /* Showcase Section */
@@ -123,7 +87,7 @@ nav .icons {
 
 .showcase p {
   font-size: 1.2rem;
-  margin-top: 20px;
+  margin-top: 20px; /* Added space between headings */
 }
 
 /* Grid of Rounded Tiles */
@@ -136,10 +100,10 @@ nav .icons {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 20px;
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto; /* Ensures grid is centered */
+  justify-content: center; /* Ensure grid is centered */
 }
 
 .tile {
@@ -148,8 +112,8 @@ nav .icons {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  height: 300px; /* Fixed tile height */
-  width: 300px; /* Fixed tile width */
+  height: 300px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -159,12 +123,6 @@ nav .icons {
 
 .tile:hover {
   transform: scale(1.05);
-}
-
-.tile a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
 }
 
 .tile img {
@@ -193,23 +151,13 @@ footer p {
 }
 
 footer .heart {
-  color: white;
+  color: white; /* White heart */
   font-size: 1.5rem;
 }
 
 /* Media Queries for Responsive Design */
-@media (max-width: 1200px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-  }
-}
-
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr; /* 1 column on small screens */
-  }
-
-  .mobile-menu {
-    width: 100%;
+    grid-template-columns: 1fr; /* Single column on smaller screens */
   }
 }
