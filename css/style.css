@@ -31,7 +31,7 @@ header h1 {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 15px; /* Space between icons and hamburger menu */
+  gap: 20px; /* Added spacing between icons */
   margin-left: auto; /* Push this section to the right */
 }
 
@@ -89,8 +89,8 @@ header h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 1200px;
-  width: 100%;
-  justify-content: center;
+  width: calc(100% - 200px); /* Ensure 100px margin on each side */
+  margin: 0 auto; /* Center the grid */
 }
 
 .tile {
@@ -146,5 +146,6 @@ footer .heart {
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr; /* Single column on smaller screens */
+    width: calc(100% - 40px); /* Reduce side margins on smaller screens */
   }
 }
