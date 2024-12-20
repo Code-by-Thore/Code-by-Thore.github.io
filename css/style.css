@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #5078be;
+  background-color: #c58ed3;
   padding: 0 20px;
   height: 60px;
   position: relative;
@@ -85,11 +85,11 @@ header h1 {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px; /* Increased the gap between grid items */
+  gap: 40px; /* Minimum gap between grid items */
   max-width: 100%;
-  width: 100%;
-  margin: 0 100px; /* Ensures there is a minimum 100px margin on left and right side */
+  margin: 0 100px; /* Ensure a minimum margin of 100px on the sides */
   justify-items: center; /* Centers grid items */
+  width: calc(100% - 200px); /* Ensures the grid never exceeds 100px margin on either side */
 }
 
 /* Individual Tiles */
@@ -145,7 +145,8 @@ footer .heart {
   .grid {
     grid-template-columns: repeat(2, 1fr); /* Switch to 2x2 grid earlier */
     gap: 40px; /* Keep the gap between grid items */
-    margin: 0 100px; /* Ensure a minimum margin of 100px on the sides */
+    margin: 0 80px; /* Ensure a margin of 80px on the sides */
+    width: calc(100% - 160px); /* Adjust width for 80px margin */
   }
 }
 
@@ -153,6 +154,7 @@ footer .heart {
   .grid {
     grid-template-columns: 1fr; /* Switch to 1x1 grid */
     gap: 40px; /* Keep the gap between grid items */
-    margin: 0 80px; /* Ensure a margin of 80px on the sides */
+    margin: 0 40px; /* Ensure a margin of 40px on the sides */
+    width: calc(100% - 80px); /* Adjust width for 40px margin */
   }
 }
