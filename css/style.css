@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #8d99ad;
+  background-color: #85abec;
   padding: 0 20px;
   height: 60px;
   position: relative;
@@ -84,14 +84,13 @@ header h1 {
 /* Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr)); /* Ensure columns have minimum size but are flexible */
+  grid-template-columns: repeat(3, 300px); /* Fixed width for grid items */
   gap: 50px; /* Minimum gap between the grid tiles */
   width: 100%;
   margin: 0 auto; /* Centers the grid */
   justify-items: center; /* Ensures items inside grid are centered */
-  padding: 0 80px; /* Ensure there's a maximum 80px padding on both sides */
   box-sizing: border-box; /* Ensure padding doesn't affect the overall width */
-  max-width: 100%; /* Ensure the grid container adjusts to the available space */
+  padding: 0 20px; /* Default padding */
 }
 
 /* Individual Tiles */
@@ -102,7 +101,7 @@ header h1 {
   overflow: hidden;
   text-align: center;
   height: 300px;
-  width: 100%; /* Ensures the tile fills the available space in each column */
+  width: 300px; /* Fixed size */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -145,12 +144,14 @@ footer .heart {
 /* Responsive Design */
 @media (max-width: 940px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Switch to 2x2 grid */
+    grid-template-columns: repeat(2, 300px); /* 2 columns, fixed grid item size */
+    gap: 50px; /* Minimum gap */
   }
 }
 
 @media (max-width: 600px) {
   .grid {
-    grid-template-columns: 1fr; /* Switch to 1x1 grid */
+    grid-template-columns: 1fr; /* 1 column, fixed grid item size */
+    gap: 50px; /* Minimum gap */
   }
 }
