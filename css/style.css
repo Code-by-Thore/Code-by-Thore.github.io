@@ -17,32 +17,31 @@ body {
 /* Navigation Bar */
 header {
   background-color: #333;
-  padding: 10px 20px;
+  padding: 20px 20px; /* Increased height of navbar */
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px; /* Reduced height of navigation bar */
+  height: 60px; /* Increased height of navbar */
 }
 
 header h1 {
   color: white;
   font-size: 1.5rem;
+  text-align: center; /* Centered text in navbar */
+  flex-grow: 1;
 }
 
+/* Navigation Icons */
 nav {
   display: flex;
+  gap: 20px;
 }
 
 nav a {
   color: white;
+  font-size: 24px; /* Adjusted size of the symbols */
   text-decoration: none;
-  padding: 10px;
-  margin: 0 10px;
-}
-
-nav a:hover {
-  background-color: #555;
 }
 
 /* Hamburger Menu */
@@ -111,13 +110,14 @@ nav a:hover {
 
 .showcase p {
   font-size: 1.2rem;
+  margin-top: 20px; /* Added space between the headings */
 }
 
 /* Grid of Rounded Tiles */
 .projects {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 40px 20px; /* Increased margin between sides */
 }
 
 .grid {
@@ -134,11 +134,12 @@ nav a:hover {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  height: 400px; /* Tile height */
+  height: 300px; /* Reduced tile height */
+  width: 250px; /* Smaller width for tiles */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
   transition: transform 0.3s;
 }
 
@@ -163,18 +164,21 @@ nav a:hover {
 footer {
   background-color: lightblue;
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px; /* Increased footer height */
   width: 100%;
   position: relative;
   bottom: 0;
-  height: 100px; /* Footer height */
+  height: 150px; /* Increased footer height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 footer .heart {
-  color: white;
+  color: white; /* White heart */
   font-size: 1.5rem;
 }
