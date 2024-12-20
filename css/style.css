@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #85abec;
+  background-color: #5fccbf;
   padding: 0 20px;
   height: 60px;
   position: relative;
@@ -29,16 +29,17 @@ header h1 {
 /* Grid Container */
 .grid-container {
   display: flex;
-  justify-content: center;
-  padding: 0 20px; /* Equal padding on left and right */
+  justify-content: center;  /* Center the grid */
+  padding: 0 20px;  /* Equal padding on left and right */
 }
 
+/* Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 300px); /* Fixed width for grid items */
-  gap: 50px; /* Minimum gap between items */
+  grid-template-columns: repeat(3, 300px);  /* Fixed size for grid items */
+  gap: 50px;  /* Minimum gap between grid items */
   width: 100%;
-  max-width: 100%; /* Ensures the grid uses the available width */
+  max-width: 100%;  /* Ensure grid uses available width */
 }
 
 /* Individual Tiles */
@@ -49,7 +50,7 @@ header h1 {
   overflow: hidden;
   text-align: center;
   height: 300px;
-  width: 300px; /* Fixed size */
+  width: 300px;  /* Fixed size */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -92,12 +93,12 @@ footer .heart {
 /* Responsive Design */
 @media (max-width: 940px) {
   .grid {
-    grid-template-columns: repeat(2, 300px); /* 2 columns */
+    grid-template-columns: repeat(2, 300px);  /* Two columns */
   }
 }
 
 @media (max-width: 600px) {
   .grid {
-    grid-template-columns: 1fr; /* 1 column */
+    grid-template-columns: 1fr;  /* One column */
   }
 }
