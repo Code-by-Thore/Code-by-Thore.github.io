@@ -9,15 +9,15 @@
 /* Header Styles */
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Space out the title and icons */
+  align-items: center; /* Center content vertically */
   background-color: #333;
   padding: 0 20px;
   height: 60px; /* Fixed height for alignment */
   position: relative;
 }
 
-/* Title */
+/* Title (Center-Aligned) */
 header h1 {
   position: absolute;
   left: 50%;
@@ -27,16 +27,17 @@ header h1 {
   text-align: center;
 }
 
-/* Navigation Icons */
+/* Navigation Icons and Menu (Right-Aligned) */
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 15px; /* Space between icons and menu */
+  gap: 15px; /* Space between icons and hamburger menu */
+  margin-left: auto; /* Push this section to the right */
 }
 
 .icons a {
   color: white;
-  font-size: 1.5rem; /* Adjusted size of icons */
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -89,7 +90,7 @@ header h1 {
   gap: 20px;
   max-width: 1200px;
   width: 100%;
-  justify-content: center; /* Ensure grid is centered */
+  justify-content: center;
 }
 
 .tile {
